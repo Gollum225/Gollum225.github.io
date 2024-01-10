@@ -1,0 +1,112 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  font-family: system-ui;
+  background-color: #f4f4f4;
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.5;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.padded {
+  width: calc(100% - 30px)
+}
+
+@media screen and (min-width: 900px) {
+  .padded {
+    width: 900px;
+  }
+}
+
+#tools {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  top: 50%;
+  left: 50%;
+  justify-items: stretch;
+  align-items: stretch;
+  grid-auto-rows: auto;
+}
+
+.toolelement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  top: 50%;
+  left: 50%;
+  background-color: black;
+  color: white;
+  flex-grow: 2;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 430px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  background-color: black;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button svg {
+  margin-left: -10px;
+}
+
+.menubar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menubar .button {
+  margin: 0.3rem;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+#introduction {
+  border-radius: 10px;
+  background-color: #cccccc;
+  padding: 10px;
+}
+
+p {
+  font-size: 1.15em;
+}
+
+#permissionButton {
+  display: none;
+}

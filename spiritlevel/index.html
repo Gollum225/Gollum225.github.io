@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+  <!-- Spiritlevel website -->
+
+  <head>
+    <title>Spiritlevel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../main.js" async></script>
+    <script src="spiritlevel.js" async></script>
+
+    <link id="css" rel="stylesheet" type="text/css" href="../main.css" />
+    <link id="css" rel="stylesheet" type="text/css" href="spritlevel.css" />
+    <title>Toolbox - Spiritlevel</title>
+  </head>
+
+  <body onload="init()">
+    <!-- for the Buttons: -->
+    <div class="menubar">
+      <div class="button" onclick="location.href = '/'">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-chevron-left"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M15 6l-6 6l6 6" />
+        </svg>
+        <span>Back</span>
+      </div>
+      <div id="permissionButton" class="button" onclick="askForPermission()">
+        Enable the sensor
+      </div>
+    </div>
+
+    <!-- The actual code for the page starts here-->
+    <div id="mainarea">
+      <div id="submain" class="adjusted">
+        <div id="top"></div>
+        <div id="bar"></div>
+        <div id="sensor">
+          Sorry, your device does not support this.<br />
+          Try it on another device!
+        </div>
+        <div id="bottom"></div>
+      </div>
+    </div>
+  </body>
+
+  <!-- normal html structure not needed -->
+</html>

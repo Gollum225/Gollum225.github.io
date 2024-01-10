@@ -1,0 +1,64 @@
+.menubar {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+}
+
+body {
+  position: fixed;
+  background-color: green;
+}
+
+#sensor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2em;
+  transform: translate(-50%, -50%);
+  z-index: 5 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  #sensor {
+    font-size: 1em;
+  }
+}
+
+/* top half of the screen */
+#top {
+  background-color: rgb(221, 196, 221);
+  width: 300vw;
+  height: calc(var(--vh, 1vh) * 300);
+}
+
+/* bottom half of the screen */
+#bottom {
+  background-color: #b8f3ff;
+  width: 300vw;
+  height: calc(var(--vh, 1vh) * 300);
+  -webkit-transition: background-color 50ms linear;
+  -ms-transition: background-color 50ms linear;
+  transition: background-color 50ms linear;
+}
+
+/* area that ist rotated */
+#mainarea {
+  position: absolute;
+  transform-origin: 50% 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transition: background-color 50ms linear;
+  -ms-transition: background-color 50ms linear;
+  transition: background-color 50ms linear;
+}
+
+#submain {
+  grid-template-rows: 1fr 1fr;
+}
+
+#bar {
+  width: 300vw;
+  height: 0vh;
+  background-color: #ffffff;
+}

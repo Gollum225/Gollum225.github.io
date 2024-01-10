@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Compass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../main.js"></script>
+    <script src="compass.js"></script>
+    <link id="css" rel="stylesheet" type="text/css" href="../main.css" />
+    <link id="css" rel="stylesheet" type="text/css" href="compass.css" />
+    <title>Toolbox - Compass</title>
+  </head>
+  <body onload="init()">
+    <!-- for the Buttons: -->
+    <div class="menubar">
+      <div class="button" onclick="location.href = '/'">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-chevron-left"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M15 6l-6 6l6 6" />
+        </svg>
+        <span>Back</span>
+      </div>
+      <div id="permissionButton" class="button" onclick="askForPermission()">
+        Enable the sensor
+      </div>
+    </div>
+
+    <!-- The actual code for the page starts here-->
+    <div class="col center stretch">
+      <div class="container">
+        <div class="marker"></div>
+        <div id="compass" class="rotate">
+          <div class="indicator">0</div>
+          <div class="indicator">30</div>
+          <div class="indicator">60</div>
+          <div class="indicator">90</div>
+          <div class="indicator">120</div>
+          <div class="indicator">150</div>
+          <div class="indicator">180</div>
+          <div class="indicator">210</div>
+          <div class="indicator">240</div>
+          <div class="indicator">270</div>
+          <div class="indicator">300</div>
+          <div class="indicator">330</div>
+          <div id="compassNeedle" class="col center">
+            <div class="arrow arrow-up"><span class="chiffre">N</span></div>
+            <div
+              class="row"
+              style="margin-top: -10px; margin-bottom: -10px; z-index: 5"
+            >
+              <div class="arrow arrow-left"><span class="chiffre">W</span></div>
+              <div class="arrow arrow-right">
+                <span class="chiffre">O</span>
+              </div>
+            </div>
+            <div class="arrow arrow-down"><span class="chiffre">S</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Displays the current GPS location of the user. -->
+      <div class="mb-50">
+        <h2>GPS location</h2>
+        <table cellspacing="10" cellpadding="0">
+          <tr>
+            <td class="unit">Latitude</td>
+            <td class="value" id="latitude">loading ...</td>
+          </tr>
+          <tr>
+            <td class="unit">Longitude</td>
+            <td class="value" id="longitude">loading ...</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

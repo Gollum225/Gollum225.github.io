@@ -1,0 +1,151 @@
+.stretch {
+  display: flex;
+  flex: 2;
+}
+
+#compass .indicator {
+  --_r: calc((var(--_w) - var(--_sz)) / 2);
+  --_x: calc(var(--_r) + (var(--_r) * cos(var(--_d))));
+  --_y: calc(var(--_r) + (var(--_r) * sin(var(--_d))));
+  --_sz: 30px;
+  display: grid;
+  height: var(--_sz);
+  left: var(--_x);
+  place-content: center;
+  position: absolute;
+  top: var(--_y);
+  width: var(--_sz);
+}
+
+.container {
+  --_w: 275px;
+
+  width: var(--_w);
+  height: var(--_w);
+  margin: auto;
+}
+
+#compass {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 5px rgba(172, 172, 172, 0.56);
+  position: relative;
+}
+
+.marker {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#compass .indicator:nth-child(1) {
+  --_d: 270deg;
+}
+#compass .indicator:nth-child(2) {
+  --_d: 300deg;
+}
+#compass .indicator:nth-child(3) {
+  --_d: 330deg;
+}
+#compass .indicator:nth-child(4) {
+  --_d: 0deg;
+}
+#compass .indicator:nth-child(5) {
+  --_d: 30deg;
+}
+#compass .indicator:nth-child(6) {
+  --_d: 60deg;
+}
+#compass .indicator:nth-child(7) {
+  --_d: 90deg;
+}
+#compass .indicator:nth-child(8) {
+  --_d: 120deg;
+}
+#compass .indicator:nth-child(9) {
+  --_d: 150deg;
+}
+#compass .indicator:nth-child(10) {
+  --_d: 180deg;
+}
+#compass .indicator:nth-child(11) {
+  --_d: 210deg;
+}
+#compass .indicator:nth-child(12) {
+  --_d: 240deg;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+}
+.arrow-up {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 100px solid red;
+}
+.arrow-down {
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 100px solid red;
+}
+.arrow-left {
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 100px solid black;
+}
+.arrow-right {
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 100px solid black;
+}
+
+.chiffre {
+  position: fixed;
+}
+.arrow-down .chiffre {
+  margin-top: -60px;
+  margin-left: -4px;
+}
+.arrow-up .chiffre {
+  margin-top: 60px;
+  margin-left: -4px;
+}
+.arrow-left .chiffre {
+  color: white;
+  margin-left: 40px;
+  margin-top: -7px;
+}
+.arrow-right .chiffre {
+  color: white;
+  margin-left: -50px;
+  margin-top: -7px;
+}
